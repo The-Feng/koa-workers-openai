@@ -1,0 +1,38 @@
+{
+  "name": "koa-workers-openai",
+  "version": "1.0.0",
+  "description": "A Koa project with workers and OpenAI integration",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "workers:dev": "wrangler dev",
+    "workers:deploy": "wrangler deploy",
+    "workers:tail": "wrangler tail"
+  },
+  "keywords": [
+    "koa",
+    "workers",
+    "openai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "@as-integrations/koa": "^1.1.1",
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@koa/cors": "^5.0.0",
+    "dotenv": "^16.6.1",
+    "graphql": "^16.8.1",
+    "graphql-tag": "^2.12.6",
+    "koa": "^2.15.0",
+    "koa-bodyparser": "^4.4.1",
+    "koa-router": "^12.0.1",
+    "openai": "^4.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "wrangler": "^3.22.0"
+  }
+}

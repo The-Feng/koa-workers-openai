@@ -1,0 +1,21 @@
+default_environment = "production"
+name = "koa-workers-openai"
+main = "worker/index.js"
+compatibility_date = "2024-10-01"  # 必须是 2023-05-18 之后的日期，否则不支持 nodejs_compat
+compatibility_flags = ["nodejs_compat"]  # 根级别配置，启用 Node.js 兼容
+
+# 账户和部署设置
+# account_id 在 GitHub Actions 中通过环境变量配置
+# 本地开发时可以取消注释并填写你的 account_id
+# account_id = "your-account-id"
+workers_dev = true
+
+[build]
+command = ""  # 无构建步骤时留空，不要在此处添加 compatibility_flags
+esbuild_config = "esbuild.js"  # 关联上述 esbuild 配置文件
+
+# 生产环境同步配置
+[env.production]
+name = "koa-workers-openai-production"
+compatibility_date = "2024-10-01"
+compatibility_flags = ["nodejs_compat"]

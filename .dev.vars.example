@@ -1,0 +1,5 @@
+# Cloudflare Workers 本地开发环境变量
+# 将此文件复制为 .dev.vars 并填入你的实际值
+# 注意：.dev.vars 不应提交到 Git（已在 .gitignore 中）
+
+OPENAI_API_KEY=your_openai_api_key_here
